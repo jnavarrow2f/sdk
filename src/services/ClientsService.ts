@@ -29,7 +29,8 @@ export class ClientsService {
     } catch (error) {
       throw new SimpleFACTError(
         `Error fetching clients: ${error instanceof Error ? error.message : 'Unknown error'}`,
-        ErrorCodes.NOT_FOUND_ERROR,
+        ErrorCodes.SERVER_ERROR,
+        500,
         error
       );
     }
@@ -48,7 +49,8 @@ export class ClientsService {
     } catch (error) {
       throw new SimpleFACTError(
         `Client with ID ${id} not found`,
-        ErrorCodes.NOT_FOUND_ERROR,
+        ErrorCodes.CLIENT_NOT_FOUND,
+        404,
         error
       );
     }
@@ -71,6 +73,7 @@ export class ClientsService {
       throw new SimpleFACTError(
         `Error creating client: ${error instanceof Error ? error.message : 'Unknown error'}`,
         ErrorCodes.VALIDATION_ERROR,
+        400,
         error
       );
     }
@@ -94,7 +97,8 @@ export class ClientsService {
     } catch (error) {
       throw new SimpleFACTError(
         `Error updating client ${id}: ${error instanceof Error ? error.message : 'Unknown error'}`,
-        ErrorCodes.NOT_FOUND_ERROR,
+        ErrorCodes.CLIENT_NOT_FOUND,
+        404,
         error
       );
     }
@@ -112,7 +116,8 @@ export class ClientsService {
     } catch (error) {
       throw new SimpleFACTError(
         `Error deleting client ${id}: ${error instanceof Error ? error.message : 'Unknown error'}`,
-        ErrorCodes.NOT_FOUND_ERROR,
+        ErrorCodes.CLIENT_NOT_FOUND,
+        404,
         error
       );
     }
@@ -165,7 +170,8 @@ export class ClientsService {
     } catch (error) {
       throw new SimpleFACTError(
         `Error setting web access for client ${id}`,
-        ErrorCodes.NOT_FOUND_ERROR,
+        ErrorCodes.CLIENT_NOT_FOUND,
+        404,
         error
       );
     }
