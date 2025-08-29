@@ -38,7 +38,7 @@ bun add simplefact-sdk
 import { SimpleFACTClient } from 'simplefact-sdk';
 
 const client = new SimpleFACTClient({
-  baseURL: 'https://app.simplefact.com',
+  baseURL: 'https://app.simplefact.es',
   apiToken: process.env.SIMPLEFACT_API_TOKEN,
   timeout: 30000,
   debug: process.env.NODE_ENV === 'development'
@@ -58,7 +58,7 @@ import { SimpleFACTClient, setSimpleFACTClient } from 'simplefact-sdk';
 
 // Configurar cliente global
 const client = new SimpleFACTClient({
-  baseURL: 'https://app.simplefact.com',
+  baseURL: 'https://app.simplefact.es',
   apiToken: 'tu_token_jwt',
   autoRefreshToken: true,
   email: 'usuario@empresa.com',
@@ -342,7 +342,7 @@ function DownloadButton({ type, id }: { type: 'invoice' | 'budget'; id: number }
 
 ```typescript
 const client = new SimpleFACTClient({
-  baseURL: 'https://app.simplefact.com',
+  baseURL: 'https://app.simplefact.es',
   apiToken: 'tu_token'
 });
 
@@ -483,7 +483,7 @@ function SystemStatus() {
 
 ```typescript
 const client = new SimpleFACTClient({
-  baseURL: 'https://app.simplefact.com',
+  baseURL: 'https://app.simplefact.es',
   apiToken: 'tu_token',
   debug: true // Habilita logging detallado
 });
@@ -505,7 +505,7 @@ SIMPLEFACT_PASSWORD=tu_password_seguro
 
 // En tu código
 const client = new SimpleFACTClient({
-  baseURL: 'https://app.simplefact.com',
+  baseURL: 'https://app.simplefact.es',
   apiToken: process.env.SIMPLEFACT_API_TOKEN,
   email: process.env.SIMPLEFACT_EMAIL,
   password: process.env.SIMPLEFACT_PASSWORD,
@@ -517,7 +517,7 @@ const client = new SimpleFACTClient({
 
 ```typescript
 const client = new SimpleFACTClient({
-  baseURL: 'https://app.simplefact.com',
+  baseURL: 'https://app.simplefact.es',
   email: 'usuario@empresa.com',
   password: 'tu_password',
   autoRefreshToken: true, // El SDK renovará automáticamente tokens expirados
@@ -575,15 +575,15 @@ Las contribuciones son bienvenidas. Por favor:
 
 ## 📄 Licencia
 
-MIT © [SimpleFact Team](https://simplefact.com)
+MIT © [SimpleFact Team](https://simplefact.es)
 
 ## 🔗 Enlaces
 
-- [Documentación API](https://docs.simplefact.com)
-- [Swagger UI](https://app.simplefact.com/docs)
+- [Documentación API](https://docs.simplefact.es)
+- [Swagger UI](https://app.simplefact.es/docs)
 - [Repositorio GitHub](https://github.com/simplefact/sdk)
 - [NPM Package](https://www.npmjs.com/package/simplefact-sdk)
-- [Soporte](mailto:support@simplefact.com)
+- [Soporte](mailto:support@simplefact.es)
 
 ---
 
