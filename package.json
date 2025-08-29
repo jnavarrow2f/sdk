@@ -1,5 +1,5 @@
 {
-  "name": "@simplefact/sdk",
+  "name": "simplefact-sdk",
   "version": "1.0.0",
   "description": "SDK oficial de JavaScript/TypeScript para SimpleFact - Sistema de facturación electrónica",
   "main": "dist/index.js",

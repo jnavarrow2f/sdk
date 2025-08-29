@@ -19,7 +19,7 @@ Esta guía cubre todas las funcionalidades del SDK SimpleFact para JavaScript/Ty
 ### Crear cliente SDK
 
 ```typescript
-import { SimpleFACTClient } from '@simplefact/sdk';
+import { SimpleFACTClient } from 'simplefact-sdk';
 
 const client = new SimpleFACTClient({
   baseURL: 'https://app.simplefact.com',     // URL base de la API
@@ -440,7 +440,7 @@ const pdfBlob = await client.budgets.downloadPDF(456);
 ### Tipos de errores
 
 ```typescript
-import { SimpleFACTError, ErrorCodes } from '@simplefact/sdk';
+import { SimpleFACTError, ErrorCodes } from 'simplefact-sdk';
 
 try {
   const invoice = await client.invoices.create(invoiceData);

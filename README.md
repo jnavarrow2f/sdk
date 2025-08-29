@@ -1,6 +1,6 @@
 # SimpleFact SDK para JavaScript/TypeScript
 
-[![npm version](https://badge.fury.io/js/@simplefact/sdk.svg)](https://badge.fury.io/js/@simplefact/sdk)
+[![npm version](https://badge.fury.io/js/simplefact-sdk.svg)](https://badge.fury.io/js/simplefact-sdk)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
@@ -21,13 +21,13 @@ SDK oficial de JavaScript/TypeScript para la API REST de SimpleFact SaaS. Simpli
 
 ```bash
 # npm
-npm install @simplefact/sdk
+npm install simplefact-sdk
 
 # yarn
-yarn add @simplefact/sdk
+yarn add simplefact-sdk
 
 # bun
-bun add @simplefact/sdk
+bun add simplefact-sdk
 ```
 
 ## 🔧 Configuración Básica
@@ -35,7 +35,7 @@ bun add @simplefact/sdk
 ### Uso en Node.js / Backend
 
 ```typescript
-import { SimpleFACTClient } from '@simplefact/sdk';
+import { SimpleFACTClient } from 'simplefact-sdk';
 
 const client = new SimpleFACTClient({
   baseURL: 'https://app.simplefact.com',
@@ -54,7 +54,7 @@ const token = await client.generateToken({
 ### Uso en React / Frontend
 
 ```typescript
-import { SimpleFACTClient, setSimpleFACTClient } from '@simplefact/sdk';
+import { SimpleFACTClient, setSimpleFACTClient } from 'simplefact-sdk';
 
 // Configurar cliente global
 const client = new SimpleFACTClient({
@@ -175,7 +175,7 @@ if (verification.verified) {
 ### Hook de Clientes
 
 ```typescript
-import { useClients } from '@simplefact/sdk/hooks';
+import { useClients } from 'simplefact-sdk/hooks';
 
 function ClientsPage() {
   const {
@@ -235,7 +235,7 @@ function ClientsPage() {
 ### Hook de Facturas
 
 ```typescript
-import { useInvoices, useInvoice } from '@simplefact/sdk/hooks';
+import { useInvoices, useInvoice } from 'simplefact-sdk/hooks';
 
 function InvoicesPage() {
   const {
@@ -305,7 +305,7 @@ function InvoiceDetail({ id }: { id: number }) {
 ### Hook de Descargas
 
 ```typescript
-import { useDownload } from '@simplefact/sdk/hooks';
+import { useDownload } from 'simplefact-sdk/hooks';
 
 function DownloadButton({ type, id }: { type: 'invoice' | 'budget'; id: number }) {
   const { download, loading, error } = useDownload();
@@ -369,7 +369,7 @@ httpClient.interceptors.response.use(
 ### Manejo de Errores
 
 ```typescript
-import { SimpleFACTError, ErrorCodes } from '@simplefact/sdk';
+import { SimpleFACTError, ErrorCodes } from 'simplefact-sdk';
 
 try {
   await client.clients.create(invalidData);
@@ -396,7 +396,7 @@ try {
 ### Rate Limiting
 
 ```typescript
-import { useRateLimit } from '@simplefact/sdk/hooks';
+import { useRateLimit } from 'simplefact-sdk/hooks';
 
 function RateLimitIndicator() {
   const rateLimitInfo = useRateLimit();
@@ -425,7 +425,7 @@ function RateLimitIndicator() {
 ## 🔄 Mutaciones con Optimistic Updates
 
 ```typescript
-import { useClients } from '@simplefact/sdk/hooks';
+import { useClients } from 'simplefact-sdk/hooks';
 
 function OptimisticClientUpdate() {
   const { data: clients, update, mutate } = useClients();
@@ -461,7 +461,7 @@ function OptimisticClientUpdate() {
 ### Health Check
 
 ```typescript
-import { useHealthCheck } from '@simplefact/sdk/hooks';
+import { useHealthCheck } from 'simplefact-sdk/hooks';
 
 function SystemStatus() {
   const { data: isHealthy, loading, error } = useHealthCheck(30000); // Check every 30s
@@ -582,7 +582,7 @@ MIT © [SimpleFact Team](https://simplefact.com)
 - [Documentación API](https://docs.simplefact.com)
 - [Swagger UI](https://app.simplefact.com/docs)
 - [Repositorio GitHub](https://github.com/simplefact/sdk)
-- [NPM Package](https://www.npmjs.com/package/@simplefact/sdk)
+- [NPM Package](https://www.npmjs.com/package/simplefact-sdk)
 - [Soporte](mailto:support@simplefact.com)
 
 ---

@@ -6,7 +6,7 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const { SimpleFACTClient, SimpleFACTError, ErrorCodes } = require('@simplefact/sdk');
+const { SimpleFACTClient, SimpleFACTError, ErrorCodes } = require('simplefact-sdk');
 
 // Cargar variables de entorno
 dotenv.config();

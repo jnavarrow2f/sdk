@@ -16,11 +16,11 @@ Esta carpeta contiene ejemplos completos de cómo usar el SimpleFact SDK en dife
 ### Instalación del SDK
 
 ```bash
-npm install @simplefact/sdk
+npm install simplefact-sdk
 # o
-yarn add @simplefact/sdk
+yarn add simplefact-sdk
 # o
-bun add @simplefact/sdk
+bun add simplefact-sdk
 ```
 
 ### Variables de Entorno
@@ -228,7 +228,7 @@ curl -X POST http://localhost:3001/api/invoices/1/payments \
 
 ```bash
 # 1. Instalar dependencias
-npm install express cors dotenv @simplefact/sdk
+npm install express cors dotenv simplefact-sdk
 
 # 2. Configurar variables de entorno
 cp .env.example .env
@@ -246,7 +246,7 @@ node node-example.js
 
 ```javascript
 // test-sdk.js
-const { SimpleFACTClient } = require('@simplefact/sdk');
+const { SimpleFACTClient } = require('simplefact-sdk');
 
 async function testSDK() {
   const client = new SimpleFACTClient({
